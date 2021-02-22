@@ -126,8 +126,8 @@ public class TicTacToe {
 				return null;
 			}
 		}
-        return "draw";
-    }
+		return "draw";
+	}
     // displayWinner method Prints The Winner Or Draw
     public static void displayWinner (String outPut) {
         if (outPut == "draw") {
