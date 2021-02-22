@@ -54,10 +54,43 @@ public class TicTacToe {
 				System.out.println("InValid Input Number");
 		}
 	}
+	public static void compPlay() {
+		int random = (int)(Math.floor(Math.random() * 10) % 9)+1;
+		if (random > 0 && random < 10) {
+			if (board[random] == ' ') {
+				board[random] = compChoice;
+			}
+			else
+				System.out.println("Position Allready Occupied");
+		}
+		else
+			System.out.println("InValid Input Number");
+	}
+
+	public static boolean tossToKnow(){
+		int random = (int)Math.floor(Math.random() * 10) % 2;
+		if ( random == 0) {
+			System.out.println(personChoice + " play first");
+			return true;
+		}
+		else {
+			System.out.println(compChoice + "play first");
+			return false;
+		}
+	}
+
 	public static void main(String[] args) {
 		createBoard();
 		playerChoice();
 		displayBoard();
-		playerPlay();
+		boolean get = tossToKnow();
+		while (true) {
+			if (get)
+				playerPlay();
+			else
+				compPlay();
+			displayBoard();
+			break;
+		}
 	}
 }
