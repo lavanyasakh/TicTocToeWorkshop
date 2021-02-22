@@ -1,4 +1,5 @@
 import java.util.*;
+
 public class TicTacToe {
 	//Static ArrayVariable
 	public static char[] board = new char[10];
