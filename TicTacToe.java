@@ -49,13 +49,13 @@ public class TicTacToe {
 					break;
 				}
 				else {
-						System.out.println("Position Occupies Already");
-						continue;
+					System.out.println("Position Occupies Already");
+					continue;
 				}
 			}
 			else {
-					System.out.println("InValid Input Number");
-					continue;
+				System.out.println("InValid Input Number");
+				continue;
 			}
 		}
 	}
@@ -67,7 +67,7 @@ public class TicTacToe {
 				break;
 			}
 			else
-					continue;
+				continue;
 		}
 	}
 
