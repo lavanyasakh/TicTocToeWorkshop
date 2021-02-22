@@ -60,7 +60,84 @@ public class TicTacToe {
 		}
 	}
 	public static void compPlay() {
-		while (true) {
+	boolean win = true;
+	// Loop to check varios winning conditions
+	for (int i = 1; i < 10; i++) {
+            switch(i) {
+                case 1:
+                    if( (board[2] == compChoice && board[3] == compChoice)
+                            || (board[4] == compChoice && board[7] == compChoice)
+                            || (board[5] == compChoice && board[9] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 2:
+                    if( (board[1] == compChoice && board[3] == compChoice)
+                            || (board[5] == compChoice && board[8] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 3:
+                    if( (board[1] == compChoice && board[2] == compChoice)
+                            || (board[6] == compChoice && board[9] == compChoice)
+                            || (board[5] == compChoice && board[7] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 4:
+                    if( (board[1] == compChoice && board[7] == compChoice)
+                            || (board[5] == compChoice && board[6] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 5:
+                    if( (board[1] == compChoice && board[9] == compChoice)
+                            || (board[4] == compChoice && board[6] == compChoice)
+                            || (board[3] == compChoice && board[7] == compChoice)
+                            || (board[2] == compChoice && board[8] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 6:
+                    if( (board[3] == compChoice && board[9] == compChoice)
+                            || (board[4] == compChoice && board[5] == compChoice)) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 7:
+                    if( (board[1] == compChoice && board[4] == compChoice)
+                            || (board[5] == compChoice && board[3] == compChoice)
+                            || (board[8] == compChoice && board[9] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 8:
+                    if( (board[7] == compChoice && board[9] == compChoice)
+                            || (board[2] == compChoice && board[5] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+                case 9:
+                    if( (board[8] == compChoice && board[7] == compChoice)
+                            || (board[6] == compChoice && board[3] == compChoice)
+                            || (board[5] == compChoice && board[1] == compChoice) ) {
+                        board[i] = compChoice;
+                        win = false;
+                    }
+                    break;
+            }
+        }
+		/* If the win is not false from the above winning conditions then go for random
+		to generate computer to move position */
+		while (win) {
 			int random = (int)(Math.floor(Math.random() * 10) % 9)+1;
 			if (board[random] == ' ') {
 				board[random] = compChoice;
