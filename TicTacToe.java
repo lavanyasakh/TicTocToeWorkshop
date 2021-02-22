@@ -148,32 +148,32 @@ public class TicTacToe {
 		playerChoice();
 		displayBoard();
 		boolean get = tossToKnow();
-        if (get){
-            while (winner == null) {
-                playerPlay();
-                displayBoard();
-                winner = winnerCheck();
-                displayWinner(winner);
-                System.out.println();
-                compPlay();
-                displayBoard();
-                winner = winnerCheck();
-                displayWinner(winner);
-            }
-        }
-        else {
-            while (winner == null) {
-                compPlay();
-                displayBoard();
-                winner = winnerCheck();
-                displayWinner(winner);
-                System.out.println();
-                playerPlay();
-                displayBoard();
-                winner = winnerCheck();
-                displayWinner(winner);
-            }
-        }		
+		if (get){
+			while (winner == null) {
+				playerPlay();
+				displayBoard();
+				winner = winnerCheck();
+				displayWinner(winner);
+				System.out.println();
+				compPlay();
+				displayBoard();
+				winner = winnerCheck();
+				displayWinner(winner);
+			}
+		}
+		else {
+			while (winner == null) {
+				compPlay();
+				displayBoard();
+				winner = winnerCheck();
+				displayWinner(winner);
+				System.out.println();
+				playerPlay();
+				displayBoard();
+				winner = winnerCheck();
+				displayWinner(winner);
+			}
+		}		
 	}
 
 }
