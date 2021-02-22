@@ -1,6 +1,5 @@
 import java.util.*;
 public class TicTacToe {
-
 	//Static ArrayVariable
 	public static char[] board = new char[10];
 	public static char personChoice, compChoice;
@@ -37,7 +36,7 @@ public class TicTacToe {
 		System.out.println("  " + board[7] + " | "+ board[8] + " | " + board[9] + "  ");
 	}
 
-	//playerPlay() method To Ask Player To Choose Slot From 1 To 9
+	//playerPlay() method To Check Whether The Position Is Empty Or Not
 	public static void playerPlay() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(personChoice + " Play First Enter Slot Number From 1 To 9 ");
