@@ -241,6 +241,21 @@ public class TicTacToe {
                 }
             }
         }
+        if (win) {
+        /*Only when win has yet to change as False the bellow statement is executed.
+        Taking a array of only corners available in the game board (5, 2, 4, 6, 8)
+        Initialising a random variable to give a position between the max length of the array */
+            int[] corners = {5, 2, 4, 6, 8};
+            int rand = new Random().nextInt(corners.length);
+            for (int i = 0; i < corners.length ; i++){
+                if (board[corners[rand]] == ' ') {
+                    board[corners[rand]] = compChoice;
+                    win = false;
+                    break;
+                }
+            }
+        }
+
 		/* If the win is not false from the above winning conditions then go for random
 		to generate computer to move position */
 		while (win) {
