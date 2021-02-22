@@ -135,6 +135,100 @@ public class TicTacToe {
                     break;
             }
         }
+        if (win) {
+            // Checking the opponent position whether it can win and stopping it by playing that position
+            for (int i = 1; i < 10; i++) {
+                switch(i) {
+                    case 1:
+                        if( (board[2] == personChoice && board[3] == personChoice)
+                                || (board[4] == personChoice && board[7] == personChoice)
+                                || (board[5] == personChoice && board[9] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 2:
+                        if( (board[1] == personChoice && board[3] == personChoice)
+                                || (board[5] == personChoice && board[8] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 3:
+                        if( (board[1] == personChoice && board[2] == personChoice)
+                                || (board[6] == personChoice && board[9] == personChoice)
+                                || (board[5] == personChoice && board[7] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 4:
+                        if( (board[1] == personChoice && board[7] == personChoice)
+                                || (board[5] == personChoice && board[6] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 5:
+                        if( (board[1] == personChoice && board[9] == personChoice)
+                                || (board[4] == personChoice && board[6] == personChoice)
+                                || (board[3] == personChoice && board[7] == personChoice)
+                                || (board[2] == personChoice && board[8] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 6:
+                        if( (board[3] == personChoice && board[9] == personChoice)
+                                || (board[4] == personChoice && board[5] == personChoice)) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 7:
+                        if( (board[1] == personChoice && board[4] == personChoice)
+                                || (board[5] == personChoice && board[3] == personChoice)
+                                || (board[8] == personChoice && board[9] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 8:
+                        if( (board[7] == personChoice && board[9] == personChoice)
+                                || (board[2] == personChoice && board[5] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                    case 9:
+                        if( (board[8] == personChoice && board[7] == personChoice)
+                                || (board[6] == personChoice && board[3] == personChoice)
+                                || (board[5] == personChoice && board[1] == personChoice) ) {
+                            if (board[i] == ' ') {
+                                board[i] = compChoice;
+                                win = false;
+                            }
+                        }
+                        break;
+                }
+            }
+        }
 		/* If the win is not false from the above winning conditions then go for random
 		to generate computer to move position */
 		while (win) {
