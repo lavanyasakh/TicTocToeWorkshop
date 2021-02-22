@@ -37,11 +37,28 @@ public class TicTacToe {
 		System.out.println("  " + board[7] + " | "+ board[8] + " | " + board[9] + "  ");
 	}
 
-
-
+	//playerPlay() method To Ask Player To Choose Slot From 1 To 9
+	public static void playerPlay() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println(personChoice + " Play First Enter Slot Number From 1 To 9 ");
+		while (true) {
+			int number = sc.nextInt();
+			if (number > 0 && number < 10) {
+				if (board[number] == ' ') {
+					board[number] = personChoice;
+					break;
+				}
+				else
+					System.out.println("Position Occupies Already");
+			}
+			else
+				System.out.println("InValid Input Number");
+		}
+	}
 	public static void main(String[] args) {
 		createBoard();
 		playerChoice();
 		displayBoard();
+		playerPlay();
 	}
 }
