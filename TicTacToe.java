@@ -229,6 +229,18 @@ public class TicTacToe {
                 }
             }
         }
+        if (win){
+        //Checking With The Corners
+            int[] corners = {1, 3, 6, 9};
+            int rand = new Random().nextInt(corners.length);
+            for (int i = 0; i < corners.length ; i++){
+                if (board[corners[rand]] == ' ') {
+                    board[corners[rand]] = compChoice;
+                    win = false;
+                    break;
+                }
+            }
+        }
 		/* If the win is not false from the above winning conditions then go for random
 		to generate computer to move position */
 		while (win) {
